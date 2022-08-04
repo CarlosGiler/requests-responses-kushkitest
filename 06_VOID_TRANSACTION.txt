@@ -1,0 +1,53 @@
+//API
+https://api-uat.kushkipagos.com/v1/charges/{ticketNumber}
+
+//REQUEST
+curl --request DELETE \
+  --url https://api-uat.kushkipagos.com/v1/charges/776267046306599791 \
+  --header 'Content-Type: application/json' \
+  --header 'Private-Merchant-Id: 9e175570a1604bc485531606c3b8e1bf'
+  --data '{
+  "fullResponse": "v2"
+}'
+
+//RESPONSE
+{
+  "details": {
+    "acquirerBank": "BANJERCITO",
+    "saleTicketNumber": "561534393015716369",
+    "amount": {
+      "extraTaxes": {
+        "agenciaDeViaje": 0,
+        "tasaAeroportuaria": 0,
+        "iac": 0
+      },
+      "subtotalIva0": 16.98,
+      "ice": 0,
+      "currency": "USD",
+      "iva": 0,
+      "subtotalIva": 0
+    },
+    "approvalCode": "000000",
+    "approvedTransactionAmount": 16.98,
+    "binInfo": {
+      "bank": "BANCO DE LA PRODUCCION S.A. (PRODUBANCO)",
+      "bindCard": "545195",
+      "lastFourDigits": "5480",
+      "type": "credit"
+    },
+    "cardHolderName": "John Doe",
+    "created": 1658360986000,
+    "merchantId": "20000000104111374000",
+    "merchantName": "TestCarlosGiler",
+    "paymentBrand": "Master Card",
+    "processorBankName": "0032~BANCO INTERNACIONAL",
+    "requestAmount": 16.98,
+    "responseCode": "000",
+    "responseText": "Transacción aprobada",
+    "transactionId": "1658361001207124540",
+    "transactionStatus": "INITIALIZED",
+    "transactionType": "VOID"
+  },
+  "ticketNumber": "661658361001207461",
+  "transactionReference": "dda072d3-eb7c-4afc-8bf4-ea4eba672c8f"
+}

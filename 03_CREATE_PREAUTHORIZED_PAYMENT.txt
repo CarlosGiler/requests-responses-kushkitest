@@ -1,0 +1,56 @@
+//API
+https://api-uat.kushkipagos.com/card/v1/preAuthorization
+
+//REQUEST
+curl --request POST \
+  --url https://api-uat.kushkipagos.com/card/v1/preAuthorization \
+  --header 'Content-Type: application/json' \
+  --header 'Private-Merchant-Id: 9e175570a1604bc485531606c3b8e1bf' \
+  --data '{
+  "token": "19cb8c7651e448d08e03ce23d7823223",
+  "amount": {
+    "subtotalIva": 0,
+    "subtotalIva0": 16.98,
+    "ice": 0,
+    "iva": 0,
+    "currency": "USD"
+  },
+  "fullResponse": "v2"
+}'
+
+//RESPONSE
+{
+  "details": {
+    "amount": {
+      "subtotalIva": 0,
+      "subtotalIva0": 16.98,
+      "ice": 0,
+      "iva": 0,
+      "currency": "USD"
+    },
+    "approvalCode": "000000",
+    "approvedTransactionAmount": 16.98,
+    "binInfo": {
+      "bank": "BANCO DE LA PRODUCCION S.A. (PRODUBANCO)",
+      "bindCard": "545195",
+      "cardCountry": "Ecuador",
+      "lastFourDigits": "5480",
+      "type": "credit"
+    },
+    "cardHolderName": "John Doe",
+    "created": 1659563257000,
+    "merchantId": "20000000105182704000",
+    "merchantName": "TestCarlosGiler",
+    "paymentBrand": "Master Card",
+    "processorBankName": "0032~BANCO INTERNACIONAL",
+    "requestAmount": 16.98,
+    "responseCode": "000",
+    "responseText": "Transacción aprobada",
+    "transactionId": "334071424783698401",
+    "transactionReference": "605fb495-5e4c-44f6-bc34-44b5ad36a667",
+    "transactionStatus": "APPROVAL",
+    "transactionType": "PREAUTHORIZATION"
+  },
+  "ticketNumber": "561534393015716369",
+  "transactionReference": "605fb495-5e4c-44f6-bc34-44b5ad36a667"
+}

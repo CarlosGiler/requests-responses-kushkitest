@@ -1,0 +1,23 @@
+//API
+https://api-uat.kushkipagos.com/subscriptions/v1/card/tokens
+
+//REQUEST
+curl --request POST \
+  --url https://api-uat.kushkipagos.com/subscriptions/v1/card/tokens \
+  --header 'Content-Type: application/json' \
+  --header 'Public-Merchant-Id: a7474583bca84186a14290eca08c6aac' \
+  --data '{
+  "card": {
+    "name": "John Doe",
+    "number": "5451951574925480",
+    "expiryMonth": "08",
+    "expiryYear": "23",
+    "cvv": "121"
+  },
+  "currency": "USD"
+}'
+
+//RESPONSE
+{
+  "token": "9abe1122ed7941539f7d0830480da137"
+}
